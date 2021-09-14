@@ -1,24 +1,27 @@
-# hugo-pdf-iframe
+# hugo-iframe
 
-Shortcode to embed PDF files using iframes and Hugo shortcode
+Shortcode to embed iframes and Hugo shortcode
+
+Works for iframe URLs and files such as PDFs.
 
 # Usage
 
 1. Add the repository as a submodule
 
 ```
-git submodule add https://github.com/ericswpark/hugo-pdf-iframe.git themes/hugo-pdf-iframe
+git submodule add https://github.com/ericswpark/hugo-iframe.git themes/hugo-iframe
 ```
 
-2. Add `hugo-pdf-iframe` as a theme in your `config.toml`:
+2. Add `hugo-iframe` as a theme in your `config.toml`:
 
 ```
-theme = ["hugo-pdf-iframe", "default-theme-name"]
+theme = ["hugo-iframe", "default-theme-name"]
 ```
 
-3. Add the following snippet where you want to embed PDFs:
+3. Add the following snippet where you want to embed iframes:
 
 ```
-{{< pdf url="/path/to/pdf/file.pdf" >}}
+{{< iframe url="https://example.com/iframe/src/url/" >}}
+{{< iframe url="/path/to/file.pdf" >}}
 ```
 
