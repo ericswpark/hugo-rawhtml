@@ -1,27 +1,30 @@
-# hugo-iframe
+# hugo-rawhtml
 
-Shortcode to embed iframes and Hugo shortcode
+Shortcode to embed raw HTML in Hugo
 
-Works for iframe URLs and files such as PDFs.
+Thanks to @anaulin for the [original code snippet (link to the blog post)][original-blog-post]. This just wraps that up into a Hugo theme so it can be added/removed from projects as needed.
+
+[original-blog-post]: https://anaulin.org/blog/hugo-raw-html-shortcode/
 
 # Usage
 
 1. Add the repository as a submodule
 
 ```
-git submodule add https://github.com/ericswpark/hugo-iframe.git themes/hugo-iframe
+git submodule add https://github.com/ericswpark/hugo-rawhtml.git themes/hugo-rawhtml
 ```
 
-2. Add `hugo-iframe` as a theme in your `config.toml`:
+2. Add `hugo-rawhtml` as a theme in your `config.toml`:
 
 ```
-theme = ["hugo-iframe", "default-theme-name"]
+theme = ["hugo-rawhtml", "default-theme-name"]
 ```
 
-3. Add the following snippet where you want to embed iframes:
+3. Add the following snippet when you want to use raw HTML:
 
-```
-{{< iframe url="https://example.com/iframe/src/url/" >}}
-{{< iframe url="/path/to/file.pdf" >}}
+```markdown
+{{< rawhtml >}}
+<!-- Insert your HTML code here -->
+{{< /rawhtml >}}
 ```
 
